@@ -9,7 +9,7 @@ import NotFoundView from '@/views/404/404.vue';
 
 // eslint-disable-next-line max-len
 // const BASE_URL = '/portfolio-vuejs'; // process.env.NODE_ENV === 'production' ? '/portfolio-vuejs' : '';
-// heh
+
 export const ROUTE_HOME = '/';
 export const ROUTE_ABOUT = '/about';
 export const ROUTE_CONTACT = '/contact';
