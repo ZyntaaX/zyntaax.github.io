@@ -1,4 +1,3 @@
-// import * as Vue from 'vue';
 import { createApp } from 'vue';
 
 import FontAwesomeIcon from '@/utilities/font.awesome.library';
