@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@gh-pages
     - name: Copy index.html as 404.html
       run: |
         find ./ -type f -name "index.html" | while read fname; do
@@ -25,6 +25,6 @@ jobs:
         git config --local user.name "GitHub Action"
         git commit -m "Add changes" -a
     - name: Push changes
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@gh-pages
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
