@@ -13,9 +13,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '12'
-      - name: Install packages
+      # - name: Install packages
         # run: npm i # if using npm
-        run: yarn # if using yarn
+        # run: yarn # if using yarn
       - name: Set Creds
         run: git config user.name "<zyntaax>" && git config user.email "<rasmus.svahnberg97@gmail.com>"
       - name: Deploy
