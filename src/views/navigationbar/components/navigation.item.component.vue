@@ -33,50 +33,67 @@ export default {
 
 <style lang="scss" scoped>
 
+  // a {
+  //   // font-weight: bold;
+  //   // color: #2c3e50;
+
+  //   &.router-link-exact-active {
+  //     color: #42b983;
+  //   }
+  // }
+
   nav {
 
     a {
       width: fit-content;
       text-decoration: none;
 
-      &:hover {
-          cursor: pointer;
-
-        .underline {
-          transform: scaleX(1);
-        }
-
+      &.router-link-exact-active {
         h3 {
           color: var(--primary-color);
         }
       }
 
-      &:active {
+      &:hover {
+          cursor: pointer;
+
         .underline {
+          opacity: 1;
           transform: scaleX(1);
         }
+
+        h3 {
+          color: var(--primary-color-light);
+        }
       }
+
+      // &:active {
+      //   .underline {
+      //     transform: scaleX(1);
+      //   }
+      // }
     }
 
     h3 {
       margin: 0;
       padding: 0 20px 0 20px;
 
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      transition: all 0.3s ease;
+      -webkit-transition: all 025s ease;
+      -moz-transition: all 0.25s ease;
+      transition: all 0.25s ease;
     }
 
     .underline {
         margin: 0 10% 0 10%;
         width: 80%;
+        opacity: 0;
         transform: scaleX(0);
         height: 4px;
         background-color: var(--primary-color);
 
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        transition: all 0.3s ease;
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        transition: all 0.25s ease;
     }
   }
 

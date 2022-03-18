@@ -1,6 +1,6 @@
 <template>
   <div>
-      Contact :D
+    <h6>Contact Page</h6>
   </div>
 </template>
 

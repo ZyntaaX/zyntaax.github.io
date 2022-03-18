@@ -1,6 +1,6 @@
 <template>
   <div>
-      Projects :D
+    <h6>Projects Page</h6>
   </div>
 </template>
 

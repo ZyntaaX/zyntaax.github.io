@@ -92,21 +92,7 @@ export default {
 
   nav {
     display: inline-flex;
-    // margin-right: 20%;
     padding: 30px;
-
-    // a {
-    //   text-decoration: none;
-
-    //   &:hover {
-    //     text-decoration: underline;
-    //   }
-    // }
-
-    // h3 {
-    //   margin: 0;
-    //   padding: 0 20px 0 20px;
-    // }
   }
 
 </style>
