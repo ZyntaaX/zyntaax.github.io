@@ -1,5 +1,5 @@
 
-name: Deploy to Github Pages
+name: Preparing deploy to GitHub Pages
 on:
   push:
     branches:
