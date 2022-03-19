@@ -1,6 +1,11 @@
 <template>
   <Card class="flex">
-    <h2 class="header-title" @click="navigateHome">Rasmus Svanberg</h2>
+    <h2
+      class="header-title"
+      @click="navigateHome"
+    >
+      Rasmus Svanberg
+    </h2>
 
     <div class="flex-fill" />
 
@@ -12,8 +17,13 @@
       />
       <!-- TODO: i18n -->
       <NavigationItemComponent
-        :route="ROUTE_ABOUT"
-        :title="'About'"
+        :route="ROUTE_RESUME"
+        :title="'Resumé'"
+      />
+      <!-- TODO: i18n -->
+      <NavigationItemComponent
+        :route="ROUTE_BLOG"
+        :title="'Blog'"
       />
       <!-- TODO: i18n -->
       <NavigationItemComponent
@@ -26,7 +36,10 @@
         :title="'Contact'"
       />
     </nav>
-    <font-awesome-icon class="search-icon" icon="magnifying-glass" />
+    <font-awesome-icon
+      class="search-icon"
+      icon="magnifying-glass"
+    />
     <!-- <input v-model="text" placeholder="Search" class="search-form"/> -->
   </Card>
 </template>
@@ -34,7 +47,7 @@
 <script>
 
 import {
-  ROUTE_HOME, ROUTE_ABOUT, ROUTE_CONTACT, ROUTE_PROJECTS,
+  ROUTE_HOME, ROUTE_RESUME, ROUTE_BLOG, ROUTE_CONTACT, ROUTE_PROJECTS,
 } from '@/router/';
 
 import Card from '@/components/cards/card.vue';
@@ -45,7 +58,8 @@ export default {
   data() {
     return {
       ROUTE_HOME,
-      ROUTE_ABOUT,
+      ROUTE_RESUME,
+      ROUTE_BLOG,
       ROUTE_CONTACT,
       ROUTE_PROJECTS,
     };

@@ -2,7 +2,8 @@
 import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
 
 import HomeView from '@/views/home/home.view.vue';
-import AboutView from '@/views/about/about.view.vue';
+import ResumeView from '@/views/resume/resume.view.vue';
+import BlogView from '@/views/blog/blog.view.vue';
 import ContactView from '@/views/contact/contact.view.vue';
 import ProjectsView from '@/views/projects/projects.view.vue';
 import NotFoundView from '@/views/404/404.vue';
@@ -11,7 +12,8 @@ import NotFoundView from '@/views/404/404.vue';
 // const BASE_URL = '/portfolio-vuejs'; // process.env.NODE_ENV === 'production' ? '/portfolio-vuejs' : '';
 // =)
 export const ROUTE_HOME = '/';
-export const ROUTE_ABOUT = '/about';
+export const ROUTE_RESUME = '/resume';
+export const ROUTE_BLOG = '/blog';
 export const ROUTE_CONTACT = '/contact';
 export const ROUTE_PROJECTS = '/projects';
 
@@ -22,9 +24,14 @@ const routes = [
     component: HomeView,
   },
   {
-    path: ROUTE_ABOUT,
-    name: 'about',
-    component: AboutView,
+    path: ROUTE_RESUME,
+    name: 'resume',
+    component: ResumeView,
+  },
+  {
+    path: ROUTE_BLOG,
+    name: 'blog',
+    component: BlogView,
   },
   {
     path: ROUTE_CONTACT,

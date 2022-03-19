@@ -1,13 +1,13 @@
 <template>
   <div>
-    404: page not found
+    <h6>Blog</h6>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'NotFoundView',
+
 };
 
 </script>
