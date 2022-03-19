@@ -21,7 +21,6 @@ const fs = require('fs');
     console.log(e.message);
     exitCode = 1;
   } finally {
-    await fs.copyFile('./dist/index.html', './dist/404.html');
     // await promises.writeFile(configFilePath, originPublicPath, fileOpts);
     await execa('git', ['checkout', '-f', 'master']);
     await execa('git', ['branch', '-D', 'gh-pages']);
