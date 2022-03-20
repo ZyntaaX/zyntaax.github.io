@@ -3,7 +3,7 @@
     "target": "es5",
     "module": "esnext",
     // "baseUrl": "./",
-    "baseUrl": "./portfolio-vuejs",
+    "baseUrl": "./",
     "moduleResolution": "node",
     "paths": {
       "@/*": [

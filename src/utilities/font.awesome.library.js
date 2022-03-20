@@ -5,10 +5,13 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 /* import specific icons */
-import { faMagnifyingGlass, faImagePortrait } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { } from '@fortawesome/free-regular-svg-icons';
+import {
+  faMagnifyingGlass, faCodeCommit, faAt, faFileLines,
+} from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 /* add icons to the library */
-library.add(faMagnifyingGlass, faImagePortrait, faGithub);
+library.add(faMagnifyingGlass, faCodeCommit, faGithub, faLinkedinIn, faAt, faFileLines);
 
 export default FontAwesomeIcon;

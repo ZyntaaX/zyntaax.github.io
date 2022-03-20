@@ -32,8 +32,8 @@ export default {
   }
 
   .main {
-    margin: 30px 30% 0 30%;
-    width: 40%;
+    margin: 30px 35% 0 35%;
+    width: 30%;
     // background-color: red;
   }
 

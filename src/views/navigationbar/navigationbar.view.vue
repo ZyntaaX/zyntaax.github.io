@@ -17,11 +17,6 @@
       />
       <!-- TODO: i18n -->
       <NavigationItemComponent
-        :route="ROUTE_RESUME"
-        :title="'Resumé'"
-      />
-      <!-- TODO: i18n -->
-      <NavigationItemComponent
         :route="ROUTE_BLOG"
         :title="'Blog'"
       />
@@ -38,7 +33,7 @@
     </nav>
     <font-awesome-icon
       class="search-icon"
-      icon="magnifying-glass"
+      :icon="['fas', 'magnifying-glass']"
     />
     <!-- <input v-model="text" placeholder="Search" class="search-form"/> -->
   </Card>
@@ -47,7 +42,7 @@
 <script>
 
 import {
-  ROUTE_HOME, ROUTE_RESUME, ROUTE_BLOG, ROUTE_CONTACT, ROUTE_PROJECTS,
+  ROUTE_HOME, ROUTE_BLOG, ROUTE_CONTACT, ROUTE_PROJECTS,
 } from '@/router/';
 
 import Card from '@/components/cards/card.vue';
@@ -58,7 +53,6 @@ export default {
   data() {
     return {
       ROUTE_HOME,
-      ROUTE_RESUME,
       ROUTE_BLOG,
       ROUTE_CONTACT,
       ROUTE_PROJECTS,
