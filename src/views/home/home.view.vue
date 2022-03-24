@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <h1>Hi!</h1>
+    <Header>
+      <h2>Hi!</h2>
+    </Header>
     <h3>
       My name is Rasmus Svanberg. I am a software developer with a bachelors degree in Computer Science.
     </h3>
@@ -17,31 +19,35 @@
       Made using the framework Vue.JS and the CSS pre-processor Sass.
     </h3>
     <h3>
-      Check out the public repository <a href="https://github.com/ZyntaaX/zyntaax.github.io">here!</a>
+      Read more about it <a href="">here!</a> (not implemented)
+      <!-- Check out the public repository <a href="https://github.com/ZyntaaX/zyntaax.github.io">here!</a> -->
     </h3>
     <br>
     <!-- Docs: htth3s://github.com/anuraghazra/github-readme-stats -->
-    <div class="badge-container">
+    <!-- <div class="badge-container">
       <h3>Here's my GitHub stats from my personal account!</h3>
       <img
         alt="Loading stats..."
         :src="gitBadgeUrl"
         class="badge"
       >
-    </div>
+    </div> -->
     <img
       class="bitmojji"
-      src="/images/bitmoji_look.png"
-      alt="Bitmoji h3ointing"
+      src="/images/bitmoji_wave.png"
+      alt="Bitmoji waving"
     >
   </div>
 </template>
 
 <script>
 
+import Header from '@/components/headers/header.vue';
+
 export default {
   name: 'HomeView',
-  comh3onents: {
+  components: {
+    Header,
   },
   computed: {
     gitBadgeUrl() {
@@ -71,6 +77,7 @@ export default {
       bottom: 0;
       right: 0;
       margin-right: 20%;
+      // margin-bottom: 5rem;
     }
   }
   .badge-container {

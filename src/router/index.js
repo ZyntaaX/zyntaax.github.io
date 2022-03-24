@@ -6,10 +6,8 @@ import BlogView from '@/views/blog/blog.view.vue';
 import ContactView from '@/views/contact/contact.view.vue';
 import ProjectsView from '@/views/projects/projects.view.vue';
 import NotFoundView from '@/views/404/404.vue';
+import ProjectDetailsView from '@/views/projects/project.details.view.vue';
 
-// eslint-disable-next-line max-len
-// const BASE_URL = '/portfolio-vuejs'; // process.env.NODE_ENV === 'production' ? '/portfolio-vuejs' : '';
-// =)
 export const ROUTE_HOME = '/';
 export const ROUTE_BLOG = '/blog';
 export const ROUTE_CONTACT = '/contact';
@@ -35,6 +33,12 @@ const routes = [
     path: ROUTE_PROJECTS,
     name: 'projects',
     component: ProjectsView,
+  },
+  {
+    path: `${ROUTE_PROJECTS}/:projectId`, // Only matches numbers, i.e. the ID
+    name: 'projects_details',
+    // props: true,
+    component: ProjectDetailsView,
   },
 
   /* This catchAll should always be placed as the last route-check! */

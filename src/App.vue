@@ -1,27 +1,38 @@
 <template>
-  <NavigationBar />
-  <div class="side-bar">
-    <Sidebar />
+  <div class="main-page">
+    <NavigationBar />
+    <div class="side-bar">
+      <Sidebar />
+    </div>
+    <router-view class="main" />
   </div>
-  <router-view class="main" />
+  <Footer />
 </template>
 
 <script>
 
 import NavigationBar from '@/views/navigationbar/navigationbar.view.vue';
-
-import Sidebar from '@/views/sidebar/sidebar.component.vue';
+import Sidebar from '@/components/sidebar/sidebar.component.vue';
+import Footer from '@/components/footer/footer.component.vue';
 
 export default {
   components: {
     NavigationBar,
     Sidebar,
+    Footer,
   },
 };
 
 </script>
 
 <style lang="scss" scoped>
+
+  .main-page {
+    height: 94vh;
+    // background-color: red;
+    overflow-y: scroll;
+    // margin-bottom: 50px;
+  }
 
   .side-bar {
     position: absolute;
@@ -32,7 +43,7 @@ export default {
   }
 
   .main {
-    margin: 30px 35% 0 35%;
+    margin: 0 35% 0 35%;
     width: 30%;
     // background-color: red;
   }
