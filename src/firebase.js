@@ -5,6 +5,7 @@ import { initializeApp } from 'firebase/app';
 
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import { getStorage, ref, getDownloadURL } from 'firebase/storage';
+import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,11 +17,21 @@ const firebaseConfig = {
   appId: '1:37138377847:web:4916ebd17de0106a252a72',
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// Initialize Firebase
 const db = getFirestore(app);
 const storage = getStorage(app);
 
 export {
-  app, db, storage, collection, getDocs, ref, getDownloadURL,
+  app,
+  db,
+  storage,
+  collection,
+  getDocs,
+  ref,
+  getDownloadURL,
+  getAuth,
+  signInWithEmailAndPassword,
+  signOut,
 };

@@ -1,17 +1,49 @@
 <template>
   <div class="container">
-    <div class="text">
-      <h6>
-        © 2022 Rasmus Svanberg.
-      </h6>
-    </div>
+    <h6>
+      © 2022 Rasmus Svanberg
+    </h6>
+    <div class="filler" />
+    <button
+      v-if="isLoggedIn"
+      @click="signOut"
+      class="signout-button"
+    >
+      Sign out
+    </button>
   </div>
 </template>
 
 <script>
 
-export default {
+import User from '@/utilities/authentication.manager';
 
+import Event, { EVENT_USER_CHANGED } from '@/utilities/event';
+
+export default {
+  data() {
+    return {
+      User,
+      isLoggedIn: User.isLoggedIn,
+    };
+  },
+  methods: {
+    async signOut() {
+      await this.User.signOut()
+        .then(() => {
+          this.$router.push('/');
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    },
+  },
+  created() {
+    Event.$on(EVENT_USER_CHANGED, (user) => {
+      console.log('USER CHANGED: ', user);
+      this.isLoggedIn = user.isLoggedIn;
+    });
+  },
 };
 
 </script>
@@ -19,23 +51,27 @@ export default {
 <style lang="scss" scoped>
 
   .container {
-    width: 100%;
-    height: 5vh;
-    // height: 5rem;
-    // padding: 0.7rem;
-    // margin: 0;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 0;
-
     background-color: var(--background-color-dark);
-    z-index: 999;
+    width: 100%;
+    text-align: left;
+    padding: 1px;
+    display: inline-flex;
 
-    .text {
-        margin-left: 20%;
-        text-align: left;
+    h6 {
+      width: fit-content;
+      margin-left: 15%;
     }
+  }
 
+  .filler {
+    flex-grow: 1;
+  }
+
+  .signout-button {
+    margin-right: 40px;
+    background-color: var(--background-color-light);
+    height: 25px;
+    margin-top: 20px;
   }
 
 </style>

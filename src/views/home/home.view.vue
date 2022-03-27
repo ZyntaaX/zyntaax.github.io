@@ -57,7 +57,13 @@ export default {
 };
 </script>
 
-<style lang="scss" scoh3ed>
+<style lang="scss" scoped>
+
+  .note {
+    h3 {
+      color: red !important;
+    }
+  }
 
   .container {
     text-align: center;

@@ -7,6 +7,7 @@ import ContactView from '@/views/contact/contact.view.vue';
 import ProjectsView from '@/views/projects/projects.view.vue';
 import NotFoundView from '@/views/404/404.vue';
 import ProjectDetailsView from '@/views/projects/project.details.view.vue';
+import LoginView from '@/views/login/login.view.vue';
 
 export const ROUTE_HOME = '/';
 export const ROUTE_BLOG = '/blog';
@@ -39,6 +40,11 @@ const routes = [
     name: 'projects_details',
     // props: true,
     component: ProjectDetailsView,
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginView,
   },
 
   /* This catchAll should always be placed as the last route-check! */

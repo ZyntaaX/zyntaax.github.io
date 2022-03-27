@@ -19,6 +19,7 @@
     "firebase": "^9.6.9",
     "npm": "^8.5.4",
     "vue": "^3.2.13",
+    "vue-base-input": "^1.0.9",
     "vue-router": "^4.0.3"
   },
   "devDependencies": {

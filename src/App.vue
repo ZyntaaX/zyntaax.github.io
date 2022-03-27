@@ -1,12 +1,20 @@
 <template>
-  <div class="main-page">
+  <div class="app">
     <NavigationBar />
     <div class="side-bar">
       <Sidebar />
     </div>
-    <router-view class="main" />
+    <div class="notice-box">
+      <GlobalNotice />
+    </div>
+    <div class="main">
+      <router-view />
+    </div>
+    <div class="fill" />
+    <div class="footer">
+      <Footer />
+    </div>
   </div>
-  <Footer />
 </template>
 
 <script>
@@ -14,12 +22,14 @@
 import NavigationBar from '@/views/navigationbar/navigationbar.view.vue';
 import Sidebar from '@/components/sidebar/sidebar.component.vue';
 import Footer from '@/components/footer/footer.component.vue';
+import GlobalNotice from '@/components/global.notice/global.notice.component.vue';
 
 export default {
   components: {
     NavigationBar,
     Sidebar,
     Footer,
+    GlobalNotice,
   },
 };
 
@@ -27,25 +37,40 @@ export default {
 
 <style lang="scss" scoped>
 
-  .main-page {
-    height: 94vh;
-    // background-color: red;
-    overflow-y: scroll;
-    // margin-bottom: 50px;
+  .app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
-  .side-bar {
-    position: absolute;
-    padding: 10px;
-    // background-color: blue;
-    width: 10%;
-    margin: 30px 0 0 16%;
+  .fill {
+    flex-grow: 1;
   }
 
   .main {
-    margin: 0 35% 0 35%;
-    width: 30%;
-    // background-color: red;
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .side-bar, .notice-box {
+    position: absolute;
+    padding: 10px;
+    width: 200px;
+    margin: 0 auto;
+    top: 15%;
+
+    &.side-bar {
+      margin-left: 16%;
+    }
+
+    &.notice-box {
+      margin-right: 16%;
+      right: 0;
+    }
+  }
+
+  .footer {
+    text-align: left;
   }
 
 </style>
