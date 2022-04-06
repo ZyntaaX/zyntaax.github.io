@@ -16,8 +16,10 @@
     "@fortawesome/vue-fontawesome": "^3.0.0-5",
     "core-js": "^3.8.3",
     "execa": "^1.0.0",
+    "firebase": "^9.6.9",
     "npm": "^8.5.4",
     "vue": "^3.2.13",
+    "vue-base-input": "^1.0.9",
     "vue-router": "^4.0.3"
   },
   "devDependencies": {

@@ -1,13 +1,19 @@
 <template>
   <div>
-    <h6>Blog</h6>
+    <Header>
+      <h2>Blog</h2>
+    </Header>
   </div>
 </template>
 
 <script>
 
-export default {
+import Header from '@/components/headers/header.vue';
 
+export default {
+  components: {
+    Header,
+  },
 };
 
 </script>

@@ -1,5 +1,8 @@
 html {
-    background-color: var(--background-color);
+    background-color: var(--background-color-light);
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
 
     h1, h2, h3, h4, h5, h6, p, a, li, ul, ol, button, input, textarea, select {
       color: var(--text-color-primary);
@@ -7,9 +10,59 @@ html {
     }
 }
 
+body {
+  padding: 0;
+  margin: 0;
+}
+
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+// SCROLLBAR
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color-light);
+  background: rgb(63, 63, 63);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+// INPUT-FIELD
+input {
+  background-color: var(--background-color-dark);
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  color: white;
+  text-align: center;
+}
+
+// BUTTON
+button {
+  background-color: var(--background-color-dark);
+  border: none;
+  padding: 5px;
+  width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
   }
+}

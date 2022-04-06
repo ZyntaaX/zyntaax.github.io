@@ -10,22 +10,18 @@
     <div class="flex-fill" />
 
     <nav>
-      <!-- TODO: i18n -->
       <NavigationItemComponent
         :route="ROUTE_HOME"
         :title="'Home'"
       />
-      <!-- TODO: i18n -->
       <NavigationItemComponent
         :route="ROUTE_BLOG"
         :title="'Blog'"
       />
-      <!-- TODO: i18n -->
       <NavigationItemComponent
         :route="ROUTE_PROJECTS"
         :title="'Projects'"
       />
-      <!-- TODO: i18n -->
       <NavigationItemComponent
         :route="ROUTE_CONTACT"
         :title="'Contact'"
@@ -64,7 +60,6 @@ export default {
   },
   methods: {
     navigateHome() {
-      console.log('Should navigate home');
       this.$router.push(ROUTE_HOME);
     },
   },

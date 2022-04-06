@@ -48,7 +48,8 @@ export default {
       width: fit-content;
       text-decoration: none;
 
-      &.router-link-exact-active {
+      // &.router-link-exact-active {
+      &.router-link-active {
         h3 {
           color: var(--primary-color);
         }

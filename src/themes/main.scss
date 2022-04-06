@@ -4,11 +4,16 @@
     --primary-color-light: rgb(113, 173, 192);
 
     /* Background */
-    --background-color: #252a34;
+    --background-color-light: #252a34;
+    --background-color-dark: #191c23;
 
     /* Text */
     --text-color-primary: rgb(199, 199, 199);
     --text-color-secondary: rgb(180, 180, 180);
+
+    /* Others */
+    --warning: rgb(192, 201, 69);
+    --error: rgb(255, 0, 0);
 
     /* Basics */
     --white: #fff;
